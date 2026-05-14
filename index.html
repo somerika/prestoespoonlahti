@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Presto Pizza — Suurpelto, Espoo · Aitoja italialaisia artesaanipizzoja</title>
+  <meta name="description" content="Käsintehtyä italialaista pizzaa Suurpellossa, Espoossa. Tilaa noudettavaksi, syö paikan päällä tai kotiinkuljetus Woltin ja Foodoran kautta." />
+  <meta name="theme-color" content="#1a1612" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Sticky navigation -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="Presto Pizza — alkuun">
+      <svg class="nav__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="32" y="40" text-anchor="middle" font-family="Fraunces" font-style="italic" font-weight="600" font-size="26" fill="currentColor">P</text>
+      </svg>
+      <span class="nav__word">Presto<span class="nav__dot">.</span></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Pääsivusto">
+      <a href="#menu">Menu</a>
+      <a href="#tarina">Tarina</a>
+      <a href="#vieraile">Vieraile</a>
+    </nav>
+
+    <a href="#tilaa" class="nav__cta">
+      Tilaa
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="nav__burger" type="button" aria-label="Avaa valikko" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobilemenu" id="mobile-menu" hidden>
+    <a href="#menu">Menu</a>
+    <a href="#tarina">Tarina</a>
+    <a href="#vieraile">Vieraile</a>
+    <a href="#tilaa">Tilaa</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__meta">
+        <span class="tag">Suurpelto · Espoo</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line">Aitoja</span>
+        <span class="line line--italic"><em>italialaisia</em></span>
+        <span class="line line--outline">pizzoja<span class="hero__period">.</span></span>
+      </h1>
+
+      <div class="hero__sub">
+        <p>Käsin venytetty taikina. 48&nbsp;tunnin kohotus. Tulikuuma uuni. Yksinkertaisia raaka-aineita — eikä mitään ylimääräistä.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#tilaa">Tilaa nyt
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#menu">Katso menu</a>
+        </div>
+      </div>
+
+      <figure class="hero__image">
+        <div class="hero__image-frame">
+          <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=1400&q=80&auto=format&fit=crop" alt="Käsintehty Margherita-pizza puu-uunissa" loading="eager" />
+        </div>
+      </figure>
+
+      <div class="hero__corner">
+        <span>Avoinna tänään</span>
+        <strong id="todayHours">10:30 — 21:00</strong>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Käsintehty taikina</span><span class="dot">●</span>
+        <span>48h kohotus</span><span class="dot">●</span>
+        <span>San Marzano -tomaatit</span><span class="dot">●</span>
+        <span>Bufala-mozzarella</span><span class="dot">●</span>
+        <span>Tulikuuma uuni</span><span class="dot">●</span>
+        <span>Gluteeniton vaihtoehto</span><span class="dot">●</span>
+        <span>Wolt &amp; Foodora</span><span class="dot">●</span>
+        <!-- duplicate for seamless loop -->
+        <span>Käsintehty taikina</span><span class="dot">●</span>
+        <span>48h kohotus</span><span class="dot">●</span>
+        <span>San Marzano -tomaatit</span><span class="dot">●</span>
+        <span>Bufala-mozzarella</span><span class="dot">●</span>
+        <span>Tulikuuma uuni</span><span class="dot">●</span>
+        <span>Gluteeniton vaihtoehto</span><span class="dot">●</span>
+        <span>Wolt &amp; Foodora</span><span class="dot">●</span>
+      </div>
+    </div>
+
+    <!-- ============ MENU ============ -->
+    <section class="menu" id="menu">
+      <header class="section__head">
+        <span class="section__num">02 — Menu</span>
+        <h2 class="section__title">
+          Pieni <em>mutta</em><br/>tarkkaan harkittu
+        </h2>
+        <p class="section__lead">Jokainen pizza venytetään tilauksesta. Pohjat valmistetaan vuorokausien aikana — emme oikaise.</p>
+      </header>
+
+      <!-- Pizzas -->
+      <div class="menu__group">
+        <div class="menu__group-head">
+          <h3>Pizzat</h3>
+          <span class="rule" aria-hidden="true"></span>
+          <span class="muted">Halk. 33 cm</span>
+        </div>
+
+        <ul class="menu__list">
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">01</span>Lasten pizza</div>
+            <div class="dish__desc">Pieni pizza, valitse 2 täytettä. Hymyä takeena.</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">11,50&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">02</span>Margherita <span class="badge">Klassikko</span></div>
+            <div class="dish__desc">Pomodoro · fior di latte · basilico · oliiviöljy</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">14,20&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">03</span>Quattro Formaggi</div>
+            <div class="dish__desc">Mozzarella · gorgonzola · parmigiano · pecorino</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">15,50&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">04</span>Tonno</div>
+            <div class="dish__desc">Tonnikala · punasipuli · oliivit · pomodoro</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">05</span>Diavola <span class="badge badge--hot">Tulinen</span></div>
+            <div class="dish__desc">Tulinen salami · chili · valkosipuli · mozzarella</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">06</span>Salame</div>
+            <div class="dish__desc">Milano-salami · mozzarella · oregano · pomodoro</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">07</span>Aloha</div>
+            <div class="dish__desc">Kinkku · ananas · mozzarella · pomodoro</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">08</span>Tupla Pepperoni</div>
+            <div class="dish__desc">Tuplapepperoni · mozzarella · pomodoro · oregano</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">09</span>Di Parma</div>
+            <div class="dish__desc">Parmankinkku · rucola · parmigiano · oliiviöljy</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">10</span>Quattro Stagioni</div>
+            <div class="dish__desc">Kinkku · sienet · artisokka · oliivit</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">11</span>Mediterranea</div>
+            <div class="dish__desc">Pesto · kirsikkatomaatti · mozzarella · rucola</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">12</span>Vegetariana</div>
+            <div class="dish__desc">Sesongin kasvikset · mozzarella · pomodoro · basilica</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">13</span>Al Pollo</div>
+            <div class="dish__desc">Marinoitu broileri · paprika · sipuli · BBQ</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">14</span>4 + Spinata</div>
+            <div class="dish__desc">Neljä juustoa · tulinen spianata-makkara · hunaja</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">15</span>Inferno <span class="badge badge--hot">Tulinen</span></div>
+            <div class="dish__desc">Nduja · pepperoni · jalapeño · valkosipuli</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish dish--star">
+            <div class="dish__name"><span class="dish__num">16</span>Supreme <span class="badge">Talon suosikki</span></div>
+            <div class="dish__desc">Salami · pepperoni · kinkku · sienet · paprika · oliivit</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">18,90&nbsp;€</div>
+          </li>
+          <li class="dish dish--star">
+            <div class="dish__name"><span class="dish__num">17</span>Oma kolme</div>
+            <div class="dish__desc">Suunnittele oma — valitse kolme suosikkitäytettä.</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">18,90&nbsp;€</div>
+          </li>
+        </ul>
+
+        <p class="menu__note">+ 3,90&nbsp;€ — gluteeniton pohja. Valmistetaan samassa keittiössä; ristikontaminaatio mahdollinen.</p>
+      </div>
+
+      <!-- Salads -->
+      <div class="menu__group">
+        <div class="menu__group-head">
+          <h3>Salaatit</h3>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <ul class="menu__list">
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">01</span>Prosciutto-salaatti</div>
+            <div class="dish__desc">Parmankinkku · rucola · kirsikkatomaatti · parmesan · balsamico</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">14,50&nbsp;€</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Drinks -->
+      <div class="menu__group">
+        <div class="menu__group-head">
+          <h3>Juomat</h3>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <ul class="menu__list">
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">01</span>Pepsi · Pepsi Max</div>
+            <div class="dish__desc">1,5 L pullo, jaettavaksi pöytään.</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">5,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">02</span>Cola · Cola Zero</div>
+            <div class="dish__desc">0,33 L tölkki.</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">3,20&nbsp;€</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section class="story" id="tarina">
+      <header class="section__head section__head--center">
+        <span class="section__num">03 — Tarina</span>
+        <h2 class="section__title">
+          Suurpellon <em>oma</em><br/>pizzeria
+        </h2>
+      </header>
+
+      <div class="story__grid">
+        <figure class="story__img story__img--a">
+          <img src="https://images.unsplash.com/photo-1571066811602-716837d681de?w=900&q=80&auto=format&fit=crop" alt="Pizzaiolo venyttää taikinaa" loading="lazy" />
+        </figure>
+
+        <div class="story__text">
+          <p class="dropcap">Pizzamme syntyy hitaasti — ja siitä emme tingi. Taikina kohoaa lähes kaksi vuorokautta, jotta jokainen suupala on kevyt, rapea ja täynnä makua. Käytämme San&nbsp;Marzano -tomaatteja, käsin revittyä mozzarellaa ja kausituoreita raaka-aineita.</p>
+          <p>Suurpellon naapuruston pizzeria — paikka, johon voi tulla työpäivän jälkeen, perheen kanssa lauantai-iltana tai noutaa pizza pyörän selästä matkalla kotiin.</p>
+          <ul class="story__bullets">
+            <li><span>01</span>Käsin venytetty, ei prässätty.</li>
+            <li><span>02</span>Pohja vasta tilauksesta.</li>
+            <li><span>03</span>Ei pakasteita, ei oikoteitä.</li>
+          </ul>
+        </div>
+
+        <figure class="story__img story__img--b">
+          <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?w=900&q=80&auto=format&fit=crop" alt="Pizza puu-uunissa" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ VISIT ============ -->
+    <section class="visit" id="vieraile">
+      <header class="section__head">
+        <span class="section__num">04 — Vieraile</span>
+        <h2 class="section__title">
+          Tule <em>käymään.</em>
+        </h2>
+      </header>
+
+      <div class="visit__grid">
+        <div class="visit__card visit__card--address">
+          <span class="visit__label">Osoite</span>
+          <p class="visit__big">Linda Tannerin<br/>kuja 2</p>
+          <p class="visit__small">02250 Espoo · Suurpelto</p>
+          <a class="link-arrow" href="https://maps.google.com/?q=Linda+Tannerin+kuja+2,+02250+Espoo" target="_blank" rel="noopener">
+            Avaa kartalla
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="visit__card visit__card--hours">
+          <span class="visit__label">Aukiolo</span>
+          <table class="hours">
+            <tbody>
+              <tr data-day="1"><th>Maanantai</th><td>10:30 — 21:00</td></tr>
+              <tr data-day="2"><th>Tiistai</th><td>10:30 — 21:00</td></tr>
+              <tr data-day="3"><th>Keskiviikko</th><td>15:00 — 21:00</td></tr>
+              <tr data-day="4"><th>Torstai</th><td>10:30 — 21:00</td></tr>
+              <tr data-day="5"><th>Perjantai</th><td>10:30 — 22:00</td></tr>
+              <tr data-day="6"><th>Lauantai</th><td>11:00 — 22:00</td></tr>
+              <tr data-day="0"><th>Sunnuntai</th><td>11:30 — 20:00</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="visit__card visit__card--contact">
+          <span class="visit__label">Yhteystiedot</span>
+          <a class="visit__phone" href="tel:+358452737666">045&nbsp;273&nbsp;7666</a>
+          <a class="visit__phone visit__phone--alt" href="tel:+358403229855">040&nbsp;322&nbsp;9855</a>
+          <a class="visit__email" href="mailto:prestosuurpelto@gmail.com">prestosuurpelto@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ORDER CTA ============ -->
+    <section class="order" id="tilaa">
+      <div class="order__inner">
+        <p class="order__kicker">— Tilaa kotiin</p>
+        <h2 class="order__title">
+          Ojennetaan pizza<br/>
+          <em>ovellesi</em> 30&nbsp;min sisällä.
+        </h2>
+
+        <div class="order__buttons">
+          <a class="bigbtn bigbtn--alt" href="https://wolt.com" target="_blank" rel="noopener">
+            <span class="bigbtn__label">Tilaa</span>
+            <span class="bigbtn__brand">Wolt</span>
+            <span class="bigbtn__arrow" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M6 16h20M18 8l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <span class="foot__logo">Presto<em>.</em></span>
+        <p>Aitoja italialaisia<br/>artesaanipizzoja Espoosta.</p>
+      </div>
+      <div class="foot__col">
+        <span class="foot__h">Sivut</span>
+        <a href="#menu">Menu</a>
+        <a href="#tarina">Tarina</a>
+        <a href="#vieraile">Vieraile</a>
+        <a href="#tilaa">Tilaa</a>
+      </div>
+      <div class="foot__col">
+        <span class="foot__h">Yhteys</span>
+        <a href="tel:+358452737666">045 273 7666</a>
+        <a href="mailto:prestosuurpelto@gmail.com">prestosuurpelto@gmail.com</a>
+        <span>Linda Tannerin kuja 2<br/>02250 Espoo</span>
+      </div>
+      <div class="foot__col">
+        <span class="foot__h">Seuraa</span>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="https://wolt.com" target="_blank" rel="noopener">Wolt</a>
+      </div>
+    </div>
+
+    <div class="foot__bottom">
+      <span>© <span id="year">2026</span> Presto Pizza · Suurpelto</span>
+    </div>
+
+    <div class="foot__mega" aria-hidden="true">PRESTO</div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
