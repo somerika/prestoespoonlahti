@@ -111,22 +111,4 @@
     });
   });
 
-  /* -------------------- Subtle parallax on hero image -------------------- */
-  const heroImg = document.querySelector('.hero__image-frame');
-  if (heroImg && window.matchMedia('(min-width: 980px)').matches) {
-    let raf = null;
-    const onMove = (e) => {
-      const r = heroImg.getBoundingClientRect();
-      const cx = (e.clientX - r.left - r.width / 2) / r.width;
-      const cy = (e.clientY - r.top - r.height / 2) / r.height;
-      if (raf) cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        heroImg.style.transform = `rotate(${1.2 + cx * 0.6}deg) translate3d(${cx * 6}px, ${cy * 6}px, 0)`;
-      });
-    };
-    const reset = () => { heroImg.style.transform = ''; };
-    heroImg.addEventListener('mousemove', onMove);
-    heroImg.addEventListener('mouseleave', reset);
-  }
-
 })();

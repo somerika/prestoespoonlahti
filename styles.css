@@ -272,14 +272,24 @@ button { font: inherit; cursor: pointer; }
 /* ------------------------------------------------------------ */
 .hero {
   position: relative;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: clamp(7rem, 13vh, 11rem) var(--pad-x) 3rem;
+  padding: clamp(7rem, 13vh, 11rem) var(--pad-x) 4rem;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  grid-template-rows: auto auto auto;
   gap: 2rem 3.5rem;
-  align-items: end;
+  align-content: end;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.hero > * { position: relative; z-index: 2; }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, var(--paper) 0%, rgba(241, 232, 210, 0.92) 30%, rgba(241, 232, 210, 0.55) 55%, rgba(241, 232, 210, 0) 75%),
+    linear-gradient(180deg, rgba(241, 232, 210, 0.6) 0%, rgba(241, 232, 210, 0) 25%, rgba(241, 232, 210, 0) 70%, rgba(241, 232, 210, 0.5) 100%);
+  pointer-events: none;
 }
 .hero__meta {
   grid-column: 1 / -1;
@@ -343,31 +353,33 @@ button { font: inherit; cursor: pointer; }
 .hero__cta { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
 .hero__image {
-  grid-column: 2 / 3;
-  grid-row: 2 / 4;
+  position: absolute;
+  inset: 0;
   margin: 0;
-  position: relative;
-  align-self: stretch;
-  animation: rise 1200ms 400ms both cubic-bezier(0.2, 0.7, 0.2, 1);
+  z-index: 0 !important;
+  animation: fadeIn 1400ms 200ms both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 .hero__image-frame {
-  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  border-radius: 6px;
-  background: var(--paper-deep);
+  background: transparent;
   position: relative;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.4) inset,
-    0 30px 60px -20px rgba(24, 20, 16, 0.35),
-    0 10px 20px -10px rgba(24, 20, 16, 0.25);
-  transform: rotate(1.2deg);
 }
-.hero__image-frame img {
+.hero__image-frame img,
+.hero__image-frame .hero__video {
   width: 100%; height: 100%;
   object-fit: cover;
+  object-position: 70% 35%;
+  transform: scale(1.15);
+  transform-origin: 70% 40%;
+  display: block;
   transition: transform 1200ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-.hero__image:hover .hero__image-frame img { transform: scale(1.04); }
 
 .hero__corner {
   position: absolute;
@@ -736,7 +748,6 @@ button { font: inherit; cursor: pointer; }
   transition: color 220ms ease;
 }
 .visit__phone:hover { color: var(--tomato); }
-.visit__phone--alt { font-size: 1.2rem; color: var(--ink-soft); }
 .visit__email {
   margin-top: auto;
   font-size: 0.95rem;
@@ -804,9 +815,6 @@ button { font: inherit; cursor: pointer; }
   font-style: italic;
   color: var(--paper);
   font-variation-settings: "opsz" 144, "WONK" 1, "SOFT" 80;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 8px;
 }
 .order__buttons { display: grid; gap: 0.85rem; }
 
