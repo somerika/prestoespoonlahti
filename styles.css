@@ -1,21 +1,21 @@
 /* ============================================================
    Presto Pizza · stylesheet
-   Editorial Italian artisan — dark charcoal, ember & tomato
+   Editorial Italian artisan — warm paper, ink, tomato, olive
    ============================================================ */
 
 :root {
-  /* Palette — dark mode */
-  --paper: #111109;
-  --paper-deep: #1c1a16;
-  --surface-dark: #0a0906;
-  --ink: #f0ebe0;
-  --ink-soft: #857d72;
-  --tomato: #d44f35;
-  --tomato-deep: #b03a25;
-  --olive: #5a7848;
-  --sand: #4a4438;
-  --blush: #1e1c18;
-  --rule: rgba(240, 235, 224, 0.10);
+  /* Palette */
+  --paper: #f1e8d2;
+  --paper-deep: #e8dcbd;
+  --surface-dark: #181410;
+  --ink: #181410;
+  --ink-soft: #3a322a;
+  --tomato: #c2412c;
+  --tomato-deep: #8d2e1f;
+  --olive: #3b4a2a;
+  --sand: #d8c89e;
+  --blush: #ecd6c0;
+  --rule: rgba(24, 20, 16, 0.18);
 
   /* Type */
   --font-display: "Fraunces", "Times New Roman", serif;
@@ -58,8 +58,8 @@ button { font: inherit; cursor: pointer; }
   inset: 0;
   pointer-events: none;
   z-index: 200;
-  opacity: 0.18;
-  mix-blend-mode: screen;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   background-size: 200px 200px;
 }
@@ -81,7 +81,7 @@ button { font: inherit; cursor: pointer; }
   border-bottom: 1px solid transparent;
 }
 .nav.is-scrolled {
-  background: rgba(13, 13, 9, 0.92);
+  background: rgba(241, 232, 210, 0.78);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   padding: 0.7rem var(--pad-x);
@@ -97,7 +97,33 @@ button { font: inherit; cursor: pointer; }
   letter-spacing: -0.02em;
   font-variation-settings: "opsz" 18, "SOFT" 50;
 }
-.nav__logo { height: 38px; width: auto; display: block; object-fit: contain; }
+.nav__logo { height: 72px; width: auto; display: block; object-fit: contain; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-self: end;
+}
+
+.nav__lang {
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.38rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 200ms, color 200ms, border-color 200ms;
+}
+.nav__lang:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
 .nav__links {
   justify-self: end;
   display: flex;
@@ -280,16 +306,6 @@ button { font: inherit; cursor: pointer; }
   overflow: hidden;
 }
 .hero > * { position: relative; z-index: 2; }
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(90deg, var(--paper) 0%, rgba(17, 17, 9, 0.92) 30%, rgba(17, 17, 9, 0.55) 55%, rgba(17, 17, 9, 0) 75%),
-    linear-gradient(180deg, rgba(17, 17, 9, 0.6) 0%, rgba(17, 17, 9, 0) 25%, rgba(17, 17, 9, 0) 70%, rgba(17, 17, 9, 0.5) 100%);
-  pointer-events: none;
-}
 .hero__meta {
   grid-column: 1 / -1;
   display: flex;
@@ -379,6 +395,16 @@ button { font: inherit; cursor: pointer; }
   display: block;
   transition: transform 1200ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
+.hero__video--mobile { display: none; }
+@media (max-width: 768px) {
+  .hero__video--desktop { display: none; }
+  .hero__video--mobile {
+    display: block;
+    object-position: center center;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+}
 
 .hero__corner {
   position: absolute;
@@ -390,29 +416,24 @@ button { font: inherit; cursor: pointer; }
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
-  color: var(--ink);
-  background: rgba(10, 9, 6, 0.68);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(240, 235, 224, 0.12);
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
+  color: var(--ink-soft);
   animation: rise 1000ms 900ms both cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-.hero__corner span { color: rgba(240, 235, 224, 0.6); display: flex; align-items: center; gap: 0.4rem; }
-.hero__corner span::after {
-  content: "●";
-  color: var(--tomato);
-  font-size: 0.55rem;
-  animation: pulse 2.4s infinite;
 }
 .hero__corner strong {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--ink);
-  margin-top: 0.15rem;
+  margin-top: 0.2rem;
   font-variation-settings: "opsz" 24;
+}
+.hero__corner::before {
+  content: "●";
+  color: var(--tomato);
+  position: absolute;
+  top: 4px; right: -1rem;
+  font-size: 0.7rem;
+  animation: pulse 2.4s infinite;
 }
 
 @keyframes pulse {
@@ -433,9 +454,9 @@ button { font: inherit; cursor: pointer; }
 /*  Marquee                                                      */
 /* ------------------------------------------------------------ */
 .marquee {
-  background: var(--surface-dark);
-  color: var(--ink);
-  border-top: 1px solid var(--rule);
+  background: var(--ink);
+  color: var(--paper);
+  border-top: 1px solid var(--ink);
   overflow: hidden;
   padding: 1.2rem 0;
   margin-top: 4rem;
@@ -594,8 +615,8 @@ button { font: inherit; cursor: pointer; }
 /*  Story                                                        */
 /* ------------------------------------------------------------ */
 .story {
-  background: var(--surface-dark);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   padding: clamp(5rem, 10vw, 8rem) 0;
   position: relative;
   overflow: hidden;
@@ -609,10 +630,10 @@ button { font: inherit; cursor: pointer; }
   pointer-events: none;
   filter: blur(60px);
 }
-.story .section__head { color: var(--ink); margin-bottom: 4rem; }
-.story .section__title { color: var(--ink); }
+.story .section__head { color: var(--paper); margin-bottom: 4rem; }
+.story .section__title { color: var(--paper); }
 .story .section__title em { color: var(--tomato); }
-.story .section__num { color: var(--tomato); }
+.story .section__num { color: var(--sand); }
 
 .story__grid {
   max-width: var(--maxw);
@@ -697,7 +718,7 @@ button { font: inherit; cursor: pointer; }
   min-height: 320px;
   transition: transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 320ms ease;
 }
-.visit__card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5); }
+.visit__card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -20px rgba(24, 20, 16, 0.25); }
 
 .visit__label {
   font-family: var(--font-mono);
@@ -767,7 +788,7 @@ button { font: inherit; cursor: pointer; }
 /* ------------------------------------------------------------ */
 .order {
   background: var(--tomato);
-  color: var(--ink);
+  color: var(--paper);
   padding: clamp(5rem, 12vw, 9rem) var(--pad-x);
   position: relative;
   overflow: hidden;
@@ -856,15 +877,15 @@ button { font: inherit; cursor: pointer; }
 .bigbtn:hover .bigbtn__label { color: var(--sand); }
 .bigbtn__brand { font-style: italic; font-variation-settings: "opsz" 96, "WONK" 1, "SOFT" 80; }
 .bigbtn__arrow svg { width: 28px; height: 28px; }
-.bigbtn--alt { background: rgba(240, 235, 224, 0.12); color: var(--ink); border: 1px solid rgba(240, 235, 224, 0.35); }
-.bigbtn--alt .bigbtn__label { color: rgba(240, 235, 224, 0.65); }
+.bigbtn--alt { background: rgba(241, 232, 210, 0.15); color: var(--paper); border: 1px solid rgba(241, 232, 210, 0.4); }
+.bigbtn--alt .bigbtn__label { color: rgba(241, 232, 210, 0.7); }
 
 /* ------------------------------------------------------------ */
 /*  Footer                                                       */
 /* ------------------------------------------------------------ */
 .foot {
-  background: var(--surface-dark);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   padding: 5rem var(--pad-x) 0;
   position: relative;
   overflow: hidden;
@@ -889,6 +910,7 @@ button { font: inherit; cursor: pointer; }
   font-variation-settings: "opsz" 96;
 }
 .foot__logo em { color: var(--tomato); font-style: italic; }
+.foot__logo-img { height: 80px; width: auto; display: block; object-fit: contain; margin-bottom: 0.5rem; }
 .foot__col { display: flex; flex-direction: column; gap: 0.5rem; }
 .foot__h {
   font-family: var(--font-mono);
