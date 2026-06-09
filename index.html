@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Presto Pizza — Suurpelto, Espoo · Aitoja italialaisia artesaanipizzoja</title>
-  <meta name="description" content="Käsintehtyä italialaista pizzaa Suurpellossa, Espoossa. Tilaa noudettavaksi, syö paikan päällä tai kotiinkuljetus Woltin ja Foodoran kautta." />
+  <title>Presto Pizza — Espoonlahti, Espoo · Aitoja italialaisia artesaanipizzoja</title>
+  <meta name="description" content="Käsintehtyä italialaista pizzaa Espoonlahdessa, Espoossa. Tilaa noudettavaksi, syö paikan päällä tai kotiinkuljetus Woltin ja Foodoran kautta." />
   <meta name="theme-color" content="#1a1612" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,7 +56,7 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="hero__meta">
-        <span class="tag">Suurpelto · Espoo</span>
+        <span class="tag">Espoonlahti · Espoo</span>
       </div>
 
       <h1 class="hero__title">
@@ -116,15 +116,49 @@
       </div>
     </div>
 
+    <!-- ============ CAMPAIGN BANNER ============ -->
+    <div class="campaign" id="kampanja">
+      <div class="campaign__inner">
+        <p class="campaign__label">Take Away</p>
+        <p class="campaign__title">Kaikki pizzat <strong>13,90&nbsp;€</strong></p>
+        <a class="campaign__cta" href="tel:+358413262868">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+          041 326 2868
+        </a>
+      </div>
+    </div>
+
     <!-- ============ MENU ============ -->
     <section class="menu" id="menu">
       <header class="section__head">
         <span class="section__num">02 — Menu</span>
         <h2 class="section__title">
-          La <em>Carte</em>
+          À la <em>carte</em>
         </h2>
         <p class="section__lead">Tutustu monipuoliseen menuumme, joka sisältää ainutlaatuisia italialaisia pizzoja.</p>
       </header>
+
+      <!-- Starters -->
+      <div class="menu__group">
+        <div class="menu__group-head">
+          <h3>Alkuruoat</h3>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <button class="menu__group-toggle" type="button" aria-expanded="false">
+          <h3>Alkuruoat</h3>
+          <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="menu__group-content">
+          <ul class="menu__list">
+            <li class="dish">
+              <div class="dish__name"><span class="dish__num">01</span>Antipasto kahdelle</div>
+              <div class="dish__desc">Focaccia, prosciutto crudo, Napolin salami, bufala mozzarella, parmesaani, rucola, kirsikkatomaatti, oliiviöljy</div>
+              <div class="dish__lead" aria-hidden="true"></div>
+              <div class="dish__price">22,90&nbsp;€</div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <!-- Pizzas -->
       <div class="menu__group">
@@ -132,113 +166,125 @@
           <h3>Pizzat</h3>
           <span class="rule" aria-hidden="true"></span>
         </div>
-
+        <button class="menu__group-toggle" type="button" aria-expanded="false">
+          <h3>Pizzat</h3>
+          <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="menu__group-content">
         <ul class="menu__list">
           <li class="dish">
             <div class="dish__name"><span class="dish__num">01</span>Margherita</div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -juusto, parmesaani, basilika</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, parmesaani, basilika, oliiviöljy</div>
             <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">14,20&nbsp;€</div>
+            <div class="dish__price">14,90&nbsp;€</div>
           </li>
           <li class="dish">
-            <div class="dish__name"><span class="dish__num">02</span>Quattro Formaggi</div>
-            <div class="dish__desc">Mascarponekastike, fior di latte -juusto, gorgonzola, rucola</div>
+            <div class="dish__name"><span class="dish__num">02</span>Tonno</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, tonnikala, punasipuli, oliivi, vihreä pesto</div>
             <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">15,50&nbsp;€</div>
+            <div class="dish__price">16,90&nbsp;€</div>
           </li>
           <li class="dish">
-            <div class="dish__name"><span class="dish__num">03</span>Tonno</div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -juusto, tonnikala, punasipuli</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">17,90&nbsp;€</div>
-          </li>
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">04</span>Diavola <span class="badge badge--hot">Tulinen</span></div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -juusto, piccante-salami, 'nduja-makkara</div>
+            <div class="dish__name"><span class="dish__num">03</span>Diavola <span class="badge badge--hot">Tulinen</span></div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, picante salami, nduja-makkara</div>
             <div class="dish__lead" aria-hidden="true"></div>
             <div class="dish__price">17,90&nbsp;€</div>
           </li>
           <li class="dish">
-            <div class="dish__name"><span class="dish__num">05</span>Salame</div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -juusto, Napolin salami, rucola</div>
+            <div class="dish__name"><span class="dish__num">04</span>Salame</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, Napolin salami, rucola, parmesaani</div>
             <div class="dish__lead" aria-hidden="true"></div>
             <div class="dish__price">17,90&nbsp;€</div>
           </li>
           <li class="dish">
-            <div class="dish__name"><span class="dish__num">06</span>Aloha</div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -juusto, palvikinkku, gorgonzola, ananas</div>
+            <div class="dish__name"><span class="dish__num">05</span>Aloha</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, palvikinkku, gorgonzola, ananas</div>
             <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">17,90&nbsp;€</div>
+            <div class="dish__price">16,90&nbsp;€</div>
           </li>
           <li class="dish">
-            <div class="dish__name"><span class="dish__num">07</span>Tupla Pepperoni</div>
-            <div class="dish__desc">Tomaattikastike, tupla fior di latte -mozzarella, tuplapepperoni</div>
+            <div class="dish__name"><span class="dish__num">06</span>Tupla Pepperoni</div>
+            <div class="dish__desc">Tomaattikastike, tupla-fior di latte mozzarella, tupla-pepperoni, oregano</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">18,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">07</span>Leone</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, Napolin salami, palvikinkku, herkkusieni, oregano</div>
             <div class="dish__lead" aria-hidden="true"></div>
             <div class="dish__price">17,90&nbsp;€</div>
           </li>
           <li class="dish">
             <div class="dish__name"><span class="dish__num">08</span>Di Parma</div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -juusto, parmankinkku, rucola</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, prosciutto crudo, rucola, kirsikkatomaatti, bufala mozzarella, oliiviöljy, parmesaani</div>
             <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">17,90&nbsp;€</div>
+            <div class="dish__price">21,90&nbsp;€</div>
           </li>
           <li class="dish">
-            <div class="dish__name"><span class="dish__num">09</span>Quattro Stagioni</div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -mozzarella, palvikinkku, herkkusieni</div>
+            <div class="dish__name"><span class="dish__num">09</span>Guanciale <span class="badge badge--hot">Tulinen</span></div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, guanciale, jalopeno, ananas</div>
             <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">17,90&nbsp;€</div>
+            <div class="dish__price">16,90&nbsp;€</div>
           </li>
           <li class="dish">
-            <div class="dish__name"><span class="dish__num">10</span>Mediterranea</div>
-            <div class="dish__desc">Tomaattikastike, kirsikkatomaatti, bufala-mozzarella, basilikakastike</div>
+            <div class="dish__name"><span class="dish__num">10</span>Supreme</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, palvikinkku, picante-salami, guanciale, oregano</div>
             <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">17,90&nbsp;€</div>
+            <div class="dish__price">19,90&nbsp;€</div>
           </li>
           <li class="dish">
-            <div class="dish__name"><span class="dish__num">11</span>Vegetariana</div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -juusto, munakoiso, paprika, herkkusieni</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">17,90&nbsp;€</div>
-          </li>
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">12</span>Al Pollo</div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -juusto, kana, kirsikkatomaatti</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">17,90&nbsp;€</div>
-          </li>
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">13</span>4 + Spinata</div>
-            <div class="dish__desc">Mascarponekastike, fior di latte -juusto, gorgonzola, piccante-salami</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">17,90&nbsp;€</div>
-          </li>
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">14</span>Inferno <span class="badge badge--hot">Tulinen</span></div>
-            <div class="dish__desc">Provolonekastike, fior di latte -mozzarella, piccante-salami</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">17,90&nbsp;€</div>
-          </li>
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">15</span>Supreme</div>
-            <div class="dish__desc">Tomaattikastike, fior di latte -juusto, palvikinkku, piccante-salami</div>
+            <div class="dish__name"><span class="dish__num">11</span>Quattro Stagioni</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, palvikinkku, herkkusieni, oliivi, artisokka</div>
             <div class="dish__lead" aria-hidden="true"></div>
             <div class="dish__price">18,90&nbsp;€</div>
           </li>
           <li class="dish">
-            <div class="dish__name"><span class="dish__num">16</span>Lasten pizza</div>
-            <div class="dish__desc">Juusto, tomaattikastike, + 2 omavalintaista täytettä</div>
+            <div class="dish__name"><span class="dish__num">12</span>Mediterranea</div>
+            <div class="dish__desc">Tomaattikastike, kirsikkatomaatti, bufala mozzarella, basilikakastike, oliiviöljy</div>
             <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">11,50&nbsp;€</div>
+            <div class="dish__price">16,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">13</span>Vegetariana</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, munakoiso, paprika, herkkusieni, artisokka, rucola</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">14</span>Al Pollo</div>
+            <div class="dish__desc">Tomaattikastike, fior di latte mozzarella, kana, parmesaani, talon majoneesi, rucola</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">16,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">15</span>Bianca Spinata</div>
+            <div class="dish__desc">Mascarponekastike, fior di latte mozzarella, gorgonzola, picante-salami, nduja-makkara, parmesaani</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">17,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">16</span>Quattro Formaggi</div>
+            <div class="dish__desc">Mascarponekastike, fior di latte mozzarella, gorgonzola, rucola, parmesaani</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">15,90&nbsp;€</div>
           </li>
           <li class="dish">
             <div class="dish__name"><span class="dish__num">17</span>Omavalintainen kolmella täytteellä</div>
-            <div class="dish__desc">Suunnittele oma — kolme valitsemaasi täytettä.</div>
+            <div class="dish__desc">Juusto, tomaattikastike, + 3 omavalintaista täytettä</div>
             <div class="dish__lead" aria-hidden="true"></div>
             <div class="dish__price">18,90&nbsp;€</div>
+          </li>
+          <li class="dish">
+            <div class="dish__name"><span class="dish__num">18</span>Lasten pizza</div>
+            <div class="dish__desc">Juusto, tomaattikastike, + 2 omavalintaista täytettä</div>
+            <div class="dish__lead" aria-hidden="true"></div>
+            <div class="dish__price">10,50&nbsp;€</div>
           </li>
         </ul>
 
         <p class="menu__note">+ 3,90&nbsp;€ — gluteeniton pohja. Valmistetaan samassa keittiössä; ristikontaminaatio mahdollinen.</p>
+        <p class="menu__note">+ 2,90&nbsp;€ — lisätäyte.</p>
+        </div>
       </div>
 
       <!-- Salads -->
@@ -247,48 +293,82 @@
           <h3>Salaatit</h3>
           <span class="rule" aria-hidden="true"></span>
         </div>
-        <ul class="menu__list">
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">01</span>Prosciutto-salaatti</div>
-            <div class="dish__desc">Salaatti mix, kirsikkatomaatti, oliivi, punasipuli, rucola, parmankinkku</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">14,50&nbsp;€</div>
-          </li>
-        </ul>
+        <button class="menu__group-toggle" type="button" aria-expanded="false">
+          <h3>Salaatit</h3>
+          <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="menu__group-content">
+          <ul class="menu__list">
+            <li class="dish">
+              <div class="dish__name"><span class="dish__num">01</span>Prosciuttosalaatti</div>
+              <div class="dish__desc">Salaatti mix, kirsikkatomaatti, oliivi, punasipuli, rucola, parmankinkku, buffalo mozzarella, balsami</div>
+              <div class="dish__lead" aria-hidden="true"></div>
+              <div class="dish__price">18,90&nbsp;€</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div class="menu__group">
+        <div class="menu__group-head">
+          <h3>Jälkiruoat</h3>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <button class="menu__group-toggle" type="button" aria-expanded="false">
+          <h3>Jälkiruoat</h3>
+          <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="menu__group-content">
+          <ul class="menu__list">
+            <li class="dish">
+              <div class="dish__name"><span class="dish__num">01</span>Talon tiramisu</div>
+              <div class="dish__desc"></div>
+              <div class="dish__lead" aria-hidden="true"></div>
+              <div class="dish__price">6,90&nbsp;€</div>
+            </li>
+            <li class="dish">
+              <div class="dish__name"><span class="dish__num">02</span>Gelato</div>
+              <div class="dish__desc">Yksi pallo 6,00&nbsp;€ — kaksi palloa 8,00&nbsp;€</div>
+              <div class="dish__lead" aria-hidden="true"></div>
+              <div class="dish__price">6,00&nbsp;€</div>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- Drinks -->
       <div class="menu__group">
         <div class="menu__group-head">
-          <h3>Juomat</h3>
+          <h3>Virvoitusjuomat</h3>
           <span class="rule" aria-hidden="true"></span>
         </div>
-        <ul class="menu__list">
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">01</span>Pepsi</div>
-            <div class="dish__desc">1,5&nbsp;l</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">5,90&nbsp;€</div>
-          </li>
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">02</span>Pepsi Max</div>
-            <div class="dish__desc">1,5&nbsp;l</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">5,90&nbsp;€</div>
-          </li>
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">03</span>Cola</div>
-            <div class="dish__desc">0,33&nbsp;l</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">3,20&nbsp;€</div>
-          </li>
-          <li class="dish">
-            <div class="dish__name"><span class="dish__num">04</span>Cola Zero</div>
-            <div class="dish__desc">0,33&nbsp;l</div>
-            <div class="dish__lead" aria-hidden="true"></div>
-            <div class="dish__price">3,20&nbsp;€</div>
-          </li>
-        </ul>
+        <button class="menu__group-toggle" type="button" aria-expanded="false">
+          <h3>Virvoitusjuomat</h3>
+          <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="menu__group-content">
+          <ul class="menu__list">
+            <li class="dish">
+              <div class="dish__name"><span class="dish__num">01</span>0,25 l</div>
+              <div class="dish__desc"></div>
+              <div class="dish__lead" aria-hidden="true"></div>
+              <div class="dish__price">2,50&nbsp;€</div>
+            </li>
+            <li class="dish">
+              <div class="dish__name"><span class="dish__num">02</span>0,33 l</div>
+              <div class="dish__desc"></div>
+              <div class="dish__lead" aria-hidden="true"></div>
+              <div class="dish__price">3,50&nbsp;€</div>
+            </li>
+            <li class="dish">
+              <div class="dish__name"><span class="dish__num">03</span>0,5 l</div>
+              <div class="dish__desc"></div>
+              <div class="dish__lead" aria-hidden="true"></div>
+              <div class="dish__price">4,50&nbsp;€</div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -330,9 +410,9 @@
       <div class="visit__grid">
         <div class="visit__card visit__card--address">
           <span class="visit__label">Osoite</span>
-          <p class="visit__big">Linda Tannerin<br/>kuja 2A</p>
-          <p class="visit__small">02250 Espoo · Suurpelto</p>
-          <a class="link-arrow" href="https://maps.google.com/?q=Linda+Tannerin+kuja+2A,+02250+Espoo" target="_blank" rel="noopener">
+          <p class="visit__big">Ulappakatu<br/>1 D 11</p>
+          <p class="visit__small">02220 Espoo · Espoonlahti</p>
+          <a class="link-arrow" href="https://maps.google.com/?q=Ulappakatu+1+D+11,+02220+Espoo" target="_blank" rel="noopener">
             Avaa kartalla
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -355,8 +435,8 @@
 
         <div class="visit__card visit__card--contact">
           <span class="visit__label">Yhteystiedot</span>
-          <a class="visit__phone" href="tel:+358452737666">045&nbsp;273&nbsp;7666</a>
-          <a class="visit__email" href="mailto:prestosuurpelto@gmail.com">prestosuurpelto@gmail.com</a>
+          <a class="visit__phone" href="tel:+358413262868">041&nbsp;326&nbsp;2868</a>
+          <a class="visit__email" href="mailto:prestoespoonlahti@gmail.com">prestoespoonlahti@gmail.com</a>
         </div>
       </div>
     </section>
@@ -399,9 +479,9 @@
       </div>
       <div class="foot__col">
         <span class="foot__h">Yhteys</span>
-        <a href="tel:+358452737666">045 273 7666</a>
-        <a href="mailto:prestosuurpelto@gmail.com">prestosuurpelto@gmail.com</a>
-        <span>Linda Tannerin kuja 2A<br/>02250 Espoo</span>
+        <a href="tel:+358413262868">041 326 2868</a>
+        <a href="mailto:prestoespoonlahti@gmail.com">prestoespoonlahti@gmail.com</a>
+        <span>Ulappakatu 1 D 11<br/>02220 Espoo</span>
       </div>
       <div class="foot__col">
         <span class="foot__h">Seuraa</span>
@@ -412,7 +492,8 @@
     </div>
 
     <div class="foot__bottom">
-      <span>© <span id="year">2026</span> Presto Pizza · Suurpelto</span>
+      <span>© <span id="year">2026</span> Presto Pizza · Espoonlahti</span>
+      <a class="foot__credit" href="https://afmedia.fi" target="_blank" rel="noopener">Powered by AFMedia</a>
     </div>
 
     <div class="foot__mega" aria-hidden="true">PRESTO</div>

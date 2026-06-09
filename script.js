@@ -97,6 +97,15 @@
     targets.forEach(el => el.classList.add('is-in'));
   }
 
+  /* -------------------- Menu category accordion (mobile) -------------------- */
+  document.querySelectorAll('.menu__group-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.closest('.menu__group');
+      const isOpen = group.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
   /* -------------------- Smooth scroll w/ nav offset -------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {

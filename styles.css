@@ -937,6 +937,118 @@ button { font: inherit; cursor: pointer; }
 .reveal.is-in { opacity: 1; transform: translateY(0); }
 
 /* ------------------------------------------------------------ */
+/* ============================================================
+   Campaign banner
+   ============================================================ */
+.campaign {
+  background: var(--tomato);
+  color: var(--paper);
+  padding: 2.5rem var(--pad-x);
+}
+.campaign__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.campaign__label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin: 0;
+  flex-basis: 100%;
+}
+.campaign__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+  line-height: 1.1;
+}
+.campaign__title strong { font-weight: 900; }
+.campaign__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--paper);
+  color: var(--tomato);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  transition: transform 150ms, box-shadow 150ms;
+  white-space: nowrap;
+}
+.campaign__cta svg { width: 1.1rem; height: 1.1rem; flex-shrink: 0; }
+.campaign__cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
+
+/* ============================================================
+   Footer credit
+   ============================================================ */
+.foot__credit {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: rgba(241, 232, 210, 0.35);
+  transition: color 200ms;
+}
+.foot__credit:hover { color: rgba(241, 232, 210, 0.65); }
+
+/* ============================================================
+   Menu category accordion (mobile)
+   ============================================================ */
+.menu__group-toggle {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .menu__group-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+  }
+  .menu__group-toggle h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .menu__group-toggle .toggle-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    flex-shrink: 0;
+    transition: transform 300ms ease;
+    color: var(--tomato);
+  }
+  .menu__group.is-open .menu__group-toggle .toggle-icon {
+    transform: rotate(180deg);
+  }
+  .menu__group-head h3 { display: none; }
+  .menu__group-content {
+    display: none;
+  }
+  .menu__group.is-open .menu__group-content {
+    display: block;
+  }
+}
+
+@media (min-width: 721px) {
+  .menu__group-content { display: block !important; }
+  .menu__group-toggle { display: none; }
+}
+
 /*  Responsive                                                   */
 /* ------------------------------------------------------------ */
 @media (max-width: 980px) {
