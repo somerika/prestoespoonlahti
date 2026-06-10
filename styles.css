@@ -119,10 +119,12 @@ button { font: inherit; cursor: pointer; }
   cursor: pointer;
   transition: background 200ms, color 200ms, border-color 200ms;
 }
-.nav__lang:hover {
-  background: var(--ink);
-  color: var(--paper);
-  border-color: var(--ink);
+@media (hover: hover) and (pointer: fine) {
+  .nav__lang:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
 }
 .nav__links {
   justify-self: end;
@@ -1086,6 +1088,9 @@ button { font: inherit; cursor: pointer; }
   }
   .hero__title { grid-column: 1 / -1; font-size: clamp(3rem, 14vw, 6rem); }
   .hero__sub { grid-column: 1 / -1; }
+  .hero__sub p {
+    text-shadow: 0 2px 18px rgba(241, 232, 210, 0.95), 0 0 8px rgba(241, 232, 210, 0.9);
+  }
   .hero__image { grid-column: auto; grid-row: auto; }
   .hero__corner {
     position: relative;
