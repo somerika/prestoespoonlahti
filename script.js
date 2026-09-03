@@ -68,10 +68,7 @@
       'day-fri': 'Perjantai',
       'day-sat': 'Lauantai',
       'day-sun': 'Sunnuntai',
-      'day-0-hours': 'Suljettu',
       'day-1-hours': 'Suljettu',
-      'day-2-hours': 'Suljettu',
-      'day-3-hours': 'Suljettu',
       'order-kicker': '— Tilaa',
       'order-title1': 'Tilaa',
       'order-title2': 'tästä.',
@@ -151,10 +148,7 @@
       'day-fri': 'Friday',
       'day-sat': 'Saturday',
       'day-sun': 'Sunday',
-      'day-0-hours': 'Closed',
       'day-1-hours': 'Closed',
-      'day-2-hours': 'Closed',
-      'day-3-hours': 'Closed',
       'order-kicker': '— Order',
       'order-title1': 'Order',
       'order-title2': 'here.',
@@ -242,23 +236,23 @@
 
   /* -------------------- Today's hours -------------------- */
   const HOURS = {
-    0: null,           // Sun — closed
-    1: null,           // Mon — closed
-    2: null,           // Tue — closed
-    3: null,           // Wed — closed
-    4: [15 * 60, 20 * 60],         // Thu 15:00–20:00
-    5: [15 * 60, 21 * 60 + 30],    // Fri 15:00–21:30
-    6: [15 * 60, 21 * 60 + 30],    // Sat 15:00–21:30
+    0: [12 * 60, 18 * 60],         // Sun 12:00–18:00
+    1: null,                       // Mon — closed
+    2: [15 * 60, 21 * 60],         // Tue 15:00–21:00
+    3: [15 * 60, 21 * 60],         // Wed 15:00–21:00
+    4: [15 * 60, 21 * 60],         // Thu 15:00–21:00
+    5: [12 * 60, 21 * 60],         // Fri 12:00–21:00
+    6: [12 * 60, 21 * 60],         // Sat 12:00–21:00
   };
 
   const HOURS_DISPLAY = {
-    0: null,
+    0: '12:00 — 18:00',
     1: null,
-    2: null,
-    3: null,
-    4: '15:00 — 20:00',
-    5: '15:00 — 21:30',
-    6: '15:00 — 21:30',
+    2: '15:00 — 21:00',
+    3: '15:00 — 21:00',
+    4: '15:00 — 21:00',
+    5: '12:00 — 21:00',
+    6: '12:00 — 21:00',
   };
 
   const today = new Date().getDay();
