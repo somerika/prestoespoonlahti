@@ -73,10 +73,12 @@
       'order-title1': 'Tilaa',
       'order-title2': 'tästä.',
       'order-btn-label': 'Tilaa',
+      'order-btn-brand': 'verkosta',
       'foot-desc': 'Aitoja italialaisia<br/>artesaanipizzoja Espoosta.',
       'foot-h-pages': 'Sivut',
       'foot-h-contact': 'Yhteys',
       'foot-h-follow': 'Tilaa',
+      'foot-order-link': 'Tilaa verkosta',
       'open-now': 'Avoinna nyt',
       'closed-now': 'Suljettu nyt',
       'closed-today': 'Suljettu tänään',
@@ -85,7 +87,7 @@
       'mq-2': 'Käsityönä alusta asti',
       'mq-3': 'Raikkaat salaatit',
       'mq-4': 'Gluteeniton pohja',
-      'mq-5': 'Tilaa Woltista',
+      'mq-5': 'Tilaa verkosta',
     },
     en: {
       'nav-menu': 'Menu',
@@ -152,11 +154,13 @@
       'order-kicker': '— Order',
       'order-title1': 'Order',
       'order-title2': 'here.',
-      'order-btn-label': 'Order via',
+      'order-btn-label': 'Order',
+      'order-btn-brand': 'online',
       'foot-desc': 'Authentic Italian<br/>artisan pizzas from Espoo.',
       'foot-h-pages': 'Pages',
       'foot-h-contact': 'Contact',
       'foot-h-follow': 'Order',
+      'foot-order-link': 'Order online',
       'open-now': 'Open now',
       'closed-now': 'Closed',
       'closed-today': 'Closed today',
@@ -165,8 +169,14 @@
       'mq-2': 'Handcrafted from scratch',
       'mq-3': 'Fresh salads',
       'mq-4': 'Gluten-free base available',
-      'mq-5': 'Order on Wolt',
+      'mq-5': 'Order online',
     }
+  };
+
+  /* order.site serves the same restaurant per language; only the /fi/ /en/ segment differs */
+  const ORDER_URL = {
+    fi: 'https://order.site/presto-pizzeria/fi/fin/espoo/restaurant/presto-espoonlahti-sf',
+    en: 'https://order.site/presto-pizzeria/en/fin/espoo/restaurant/presto-espoonlahti-sf',
   };
 
   let currentLang = localStorage.getItem('presto-lang') || 'fi';
@@ -185,6 +195,10 @@
           el.textContent = T[lang][key];
         }
       }
+    });
+
+    document.querySelectorAll('[data-order-link]').forEach(a => {
+      a.href = ORDER_URL[lang];
     });
 
     // Lang button shows the other language
